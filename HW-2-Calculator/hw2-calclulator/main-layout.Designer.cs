@@ -254,7 +254,6 @@
             this.button15.TabIndex = 16;
             this.button15.Text = "Back\r\n";
             this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -281,7 +280,6 @@
             this.button17.TabIndex = 14;
             this.button17.Text = "History";
             this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // textBox1
             // 
@@ -308,7 +306,6 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(512, 55);
             this.textBox2.TabIndex = 18;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -436,7 +433,6 @@
             this.button26.TabIndex = 28;
             this.button26.Text = "(";
             this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
