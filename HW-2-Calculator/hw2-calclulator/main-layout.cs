@@ -145,6 +145,11 @@ namespace hw2_calclulator
             {
                 double ans = Sqrt(Double.Parse(txt_input.Text));
                 txt_answer.Text = ans.ToString();
+                string compute = txt_input.Text + " ^2 = " + ans + '\n';
+                txt_input.Text = "";
+
+
+                updateHistory(compute);
             }
             catch (Exception E)
             {
