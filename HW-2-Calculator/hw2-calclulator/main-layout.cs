@@ -118,9 +118,20 @@ namespace hw2_calclulator
 
         private void btn_dot_Click(object sender, EventArgs e)
         {
+            string text = txt_input.Text;
+
+            string[] ls_text = text.Split(' ');
+            if (!(hasDot(ls_text[ls_text.Length - 1])))
+            {
+                txt_input.Text += ".";
+            }
+        }
+
+        private bool hasDot(string s)
+        {
             bool hasDot = false;
-            
-            foreach (char c in txt_input.Text)
+
+            foreach (char c in s)
             {
                 if (c == '.')
                 {
@@ -128,10 +139,8 @@ namespace hw2_calclulator
                 }
             }
 
-            if (!hasDot)
-            {
-                txt_input.Text += ".";
-            }
+            return hasDot;
+
         }
 
         private void btn_0_Click(object sender, EventArgs e)
