@@ -41,6 +41,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPig = new System.Windows.Forms.Button();
             this.PigPassThrough = new System.Windows.Forms.Button();
+            this.Credits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(688, 156);
+            this.button2.Location = new System.Drawing.Point(729, 112);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button2.Size = new System.Drawing.Size(446, 329);
@@ -73,13 +74,14 @@
             // 
             this.OutText.BackColor = System.Drawing.Color.White;
             this.OutText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutText.Location = new System.Drawing.Point(728, 185);
+            this.OutText.Location = new System.Drawing.Point(771, 137);
             this.OutText.Multiline = true;
             this.OutText.Name = "OutText";
             this.OutText.ReadOnly = true;
             this.OutText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OutText.Size = new System.Drawing.Size(369, 195);
             this.OutText.TabIndex = 6;
+            this.OutText.Text = "Hi, I am Scronches the Pig!";
             // 
             // button3
             // 
@@ -176,9 +178,9 @@
             this.btnPig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPig.Location = new System.Drawing.Point(496, 408);
+            this.btnPig.Location = new System.Drawing.Point(475, 390);
             this.btnPig.Name = "btnPig";
-            this.btnPig.Size = new System.Drawing.Size(203, 258);
+            this.btnPig.Size = new System.Drawing.Size(251, 288);
             this.btnPig.TabIndex = 1;
             this.btnPig.UseVisualStyleBackColor = false;
             this.btnPig.Click += new System.EventHandler(this.btnPig_Click);
@@ -197,6 +199,24 @@
             this.PigPassThrough.UseVisualStyleBackColor = false;
             this.PigPassThrough.Click += new System.EventHandler(this.btnPig_Click);
             // 
+            // Credits
+            // 
+            this.Credits.BackColor = System.Drawing.Color.Transparent;
+            this.Credits.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Credits.FlatAppearance.BorderSize = 0;
+            this.Credits.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Credits.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Credits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Credits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Credits.ForeColor = System.Drawing.Color.Teal;
+            this.Credits.Location = new System.Drawing.Point(295, 644);
+            this.Credits.Name = "Credits";
+            this.Credits.Size = new System.Drawing.Size(108, 34);
+            this.Credits.TabIndex = 10;
+            this.Credits.Text = "C&redits";
+            this.Credits.UseVisualStyleBackColor = false;
+            this.Credits.Click += new System.EventHandler(this.Credits_Click);
+            // 
             // PigLatin
             // 
             this.AcceptButton = this.PigPassThrough;
@@ -205,6 +225,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1187, 700);
+            this.Controls.Add(this.Credits);
             this.Controls.Add(this.btnPig);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
@@ -236,6 +257,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPig;
         private System.Windows.Forms.Button PigPassThrough;
+        private System.Windows.Forms.Button Credits;
     }
 }
 

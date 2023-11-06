@@ -21,6 +21,8 @@ namespace HW_3_Pig_Latin
 
         private void btnPig_Click(object sender, EventArgs e)
         {
+
+            //there is a hidden button that is clicked for the accept key, turns out when the accept key is pressed it is auto highlighted and ruined the immersion of the pig
             string text = InTextBox.Text;
             if (text.Trim() == "")
             {
@@ -57,7 +59,7 @@ namespace HW_3_Pig_Latin
             string[] words = text.Split(' ');
             foreach (string word in words) 
             {
-                sb.Append(translate_Word(word) + " ");
+                sb.Append(translate_Word(word.Trim()) + " ");
             }
 
             return sb.ToString();
@@ -66,14 +68,17 @@ namespace HW_3_Pig_Latin
         private string translate_Word(string word)
         {
             string t_word = "";
+            if (hasNumOrSymbol(word))
+            {
+                return word;
+            }
+
+            if (word.Trim() == "")
+            {
+                return word;
+            }
 
             ArrayList vowels = new ArrayList() { 'a', 'e', 'i', 'u', 'o', 'A', 'E', 'I', 'U', 'O' };
-
-            if (vowels.Contains(word[0]))
-            {
-                t_word = word + "way";
-                return t_word;
-            }
 
             if (isConsonat(word[0]))
             {
@@ -82,12 +87,6 @@ namespace HW_3_Pig_Latin
 
                 foreach (char ch in word)
                 {
-                    if (isNumOrSymbol(ch))
-                    {
-                        //Don’t translate words that contain numbers or symbols. For example, 123 should be left as 123, and bill@microsoft.com should be left as bill@microsoft.com.
-                        return word;
-                    }
-
                     if (count == 1)
                     {
                         //If a word starts with the letter Y, the Y should be treated as a consonant. If the Y appears anywhere else in the word, it should be treated as a vowel.
@@ -110,6 +109,12 @@ namespace HW_3_Pig_Latin
                 }
             }
 
+            else if (vowels.Contains(word[0]))
+            {
+                t_word = word + "way";
+                return t_word;
+            }
+
             return t_word;
         }
 
@@ -123,10 +128,23 @@ namespace HW_3_Pig_Latin
             return false;
         }
 
+        private bool hasNumOrSymbol(string word)
+        {
+            foreach (char c in word )
+            {
+                if (isNumOrSymbol(c))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private bool isNumOrSymbol(char c)
         //ascii table https://www.asciitable.com/
         {
-            if ((c >= 33 && c <= 64) || (c >= 91 && c <= 96 ))
+            if ((c >= 33 && c <= 64) || (c >= 91 && c <= 96 ) || (c > 122))
             {
                 return true;
             }
@@ -134,6 +152,9 @@ namespace HW_3_Pig_Latin
             return false;
         }
 
-
+        private void Credits_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Programmer: KingOfMongeese\r\nLatin Pig Drawing: Jk");
+        }
     }
 }
