@@ -68,7 +68,7 @@ namespace HW_3_Pig_Latin
         private string translate_Word(string word)
         {
             string t_word = "";
-            if (hasNumOrSymbol(word))
+            if (hasNumOrSymbol(word) && ! word.Contains('\''))
             {
                 return word;
             }
@@ -154,7 +154,8 @@ namespace HW_3_Pig_Latin
 
         private void Credits_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Programmer: KingOfMongeese\r\nLatin Pig Drawing: Jk");
+            MessageBox.Show("Programmer: KingOfMongeese\nLatin Pig Drawing: Jk");
         }
+
     }
 }
